@@ -1,3 +1,4 @@
+
 # xevrion/rust  
 ![Rust](https://img.shields.io/badge/Rust-1.74%2B-orange?logo=rust) ![License](https://img.shields.io/badge/License-MIT-blue) ![Build](https://img.shields.io/github/actions/workflow/status/xevrion/rust/ci.yml?branch=main&label=CI) ![Version](https://img.shields.io/badge/Version-0.1.0-success)  
 
@@ -60,7 +61,7 @@ xevrion/rust/
 
 ---  
 
-## Getting Started  
+## Getting Started 🚀
 
 ### Prerequisites  
 
@@ -74,12 +75,29 @@ xevrion/rust/
 
 ### Installation  
 
-```bash
+To get started with one of the example projects, navigate into its directory:
+
+bash
+cd hello_cargo
+# or
+cd hello_world
+
 # 1️⃣ Clone the repository
 git clone https://github.com/xevrion/rust.git
 cd rust
 
-# 2️⃣ (First‑time only) Initialise the Cargo project if missing
+## 2️⃣ (First‑time only) Initialise the Cargo project if missing 🛠️
+
+This step is only necessary if you are creating a new Rust project from scratch or converting a standalone `.rs` file into a Cargo project.
+
+For example, if you were to convert the `hello_world` example into a Cargo project:
+
+bash
+cd hello_world
+cargo init --bin .
+
+
+> **Note**: The `hello_cargo` example project already contains a `Cargo.toml` file and does not require this initialization step.
 #    This will create Cargo.toml and the src folder.
 cargo init --bin hello_world
 
@@ -109,9 +127,18 @@ GREETING="Hello, Rustaceans!"
 Run the compiled binary directly or via Cargo:
 
 ```bash
-# Using Cargo (recommended during development)
+## Using Cargo (recommended during development) 📦
+
+To run a specific Cargo project, navigate into its directory and use `cargo run`.
+
+For example, to run the `hello_cargo` project:
+
+bash
+cd hello_cargo
 cargo run --quiet
 
+
+This will compile and execute the `main.rs` file within the `hello_cargo` project.
 # Using the compiled binary
 ./target/release/hello_world
 ```
