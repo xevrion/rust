@@ -1,0 +1,6 @@
+# Ignore all target directories (build artifacts)
+target/
+
+# Optional: Ignore other common temporary files
+**/*.rs.bk
+Cargo.lock
