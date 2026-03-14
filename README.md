@@ -28,8 +28,10 @@ Current version: **0.1.0** (initial release).
 | **Cargo integration** | Uses `cargo` for building, testing, and running. | ✅ Stable |
 | **Cross‑platform** | Works on Linux, macOS, and Windows. | ✅ Stable |
 | **Extensible layout** | Simple folder structure that scales to multi‑module crates. | ✅ Stable |
+| **Guessing Game** | Generates a random number and prompts the user to guess it. | ✅ Stable |
 
----  
+---
+
 
 ## Tech Stack  
 
@@ -78,7 +80,9 @@ xevrion/rust/
 To get started with one of the example projects, navigate into its directory:
 
 bash
-cd hello_cargo
+cd guessing_game
+
+
 # or
 cd hello_world
 
@@ -126,7 +130,14 @@ GREETING="Hello, Rustaceans!"
 
 Run the compiled binary directly or via Cargo:
 
-```bash
+bash
+# Navigate to the guessing game directory
+cd guessing_game
+
+# Run the game using Cargo
+cargo run
+
+
 ## Using Cargo (recommended during development) 📦
 
 To run a specific Cargo project, navigate into its directory and use `cargo run`.
@@ -187,7 +198,8 @@ cargo run -- Alice
 - Use `clippy` for linting.  
 - Keep `main.rs` short; move reusable logic to modules under `src/`.
 
----  
+---
+
 
 ## Deployment  
 
