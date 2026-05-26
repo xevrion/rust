@@ -1,24 +1,25 @@
 use std::cmp::Ordering;
 use std::io;
 
-use rand::Rng;
+use rand::Rng; // random number generator
 
 fn main() {
     println!("Guess the number!");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100); // rust defaults to i32.
+    let secret_number = rand::thread_rng().gen_range(1..=100);
 
     // println!("The secret number is: {secret_number}");
 
     loop {
         println!("Please input your guess.");
+
         let mut guess = String::new();
+        // in rust, variables are immutable by default, so we make them mutable whenever we need them to be!
 
         io::stdin()
-            .read_line(&mut guess) // appends the input to the guess variable without overwriting it // also the string argument needs to be mutable because read_line needs to change it
-            // here & is used to create a reference to the guess variable, which allows read_line to modify the original variable without taking ownership of it
-            // references are immutable by default. that's why we write &mut guess to make it mutable
+            .read_line(&mut guess)
             .expect("Failed to read line");
+        // by default even references are immutable, so rather than `&guess` you have to write `&mut guess` to make them mutable.
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
@@ -26,6 +27,8 @@ fn main() {
         };
 
         println!("You guessed: {guess}");
+
+        // now we compare
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
