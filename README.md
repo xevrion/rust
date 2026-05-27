@@ -1,3 +1,4 @@
+
 # Rust Learning & Exploration Workspace
 
 [![Rust](https://img.shields.io/badge/rust-2024-orange.svg?style=flat-square&logo=rust)](https://www.rust-lang.org)
@@ -14,8 +15,12 @@ All projects in this workspace are built using the modern **Rust 2024 Edition**,
 
 The repository is organized as a multi-project workspace. Each directory represents an independent, runnable Rust application focusing on specific language concepts:
 
-```git
+git
 ├── .gitignore
+├── bounce/              # Terminal bouncing ball animation using crossterm
+│   ├── Cargo.toml
+│   └── src/
+│       └── main.rs
 ├── data_types/          # Deep dive into scalar and compound data types
 │   ├── Cargo.toml
 │   └── src/
@@ -34,9 +39,6 @@ The repository is organized as a multi-project workspace. Each directory represe
     ├── Cargo.toml
     └── src/
         └── main.rs
-```
-
----
 
 ## 🚀 Sub-Project Overview
 
@@ -74,8 +76,14 @@ The repository is organized as a multi-project workspace. Each directory represe
   * Compound types: Tuples and Arrays.
   * Type annotations and implicit type inference.
 
----
-
+### 6. `bounce`
+* **Focus**: Terminal rendering, non-blocking input, and real-time animation.
+* **Description**: A visual terminal demo featuring a bouncing ball with a fading trail inside a dynamic Unicode box frame.
+* **Key Concepts**:
+  * Real-time rendering and terminal control using the `crossterm` crate.
+  * Non-blocking input polling and event loops.
+  * Terminal state restoration using the `Drop` trait.
+  * Dynamic terminal resizing and boundary collision physics.
 ## 🛠️ Tech Stack
 
 * **Language**: [Rust](https://www.rust-lang.org/) (Edition 2024)
@@ -122,7 +130,17 @@ Each project can be run independently. Navigate to the project directory or run 
 #### Method A: Direct Execution (From Root)
 You can run any Cargo-managed project directly from the root directory:
 
-```bash
+bash
+cargo run -p bounce
+
+
+#### Method B: Directory Execution
+Or navigate to the project directory and run:
+
+bash
+cd bounce
+cargo run
+
 # Run the Guessing Game
 cargo run --manifest-path guessing_game/Cargo.toml
 
