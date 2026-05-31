@@ -15,12 +15,8 @@ All projects in this workspace are built using the modern **Rust 2024 Edition**,
 
 The repository is organized as a multi-project workspace. Each directory represents an independent, runnable Rust application focusing on specific language concepts:
 
-git
+
 ├── .gitignore
-├── bounce/              # Terminal bouncing ball animation using crossterm
-│   ├── Cargo.toml
-│   └── src/
-│       └── main.rs
 ├── data_types/          # Deep dive into scalar and compound data types
 │   ├── Cargo.toml
 │   └── src/
@@ -75,15 +71,6 @@ git
   * Scalar types: Integers, floating-point numbers, booleans, and characters.
   * Compound types: Tuples and Arrays.
   * Type annotations and implicit type inference.
-
-### 6. `bounce`
-* **Focus**: Terminal rendering, non-blocking input, and real-time animation.
-* **Description**: A visual terminal demo featuring a bouncing ball with a fading trail inside a dynamic Unicode box frame.
-* **Key Concepts**:
-  * Real-time rendering and terminal control using the `crossterm` crate.
-  * Non-blocking input polling and event loops.
-  * Terminal state restoration using the `Drop` trait.
-  * Dynamic terminal resizing and boundary collision physics.
 ## 🛠️ Tech Stack
 
 * **Language**: [Rust](https://www.rust-lang.org/) (Edition 2024)
